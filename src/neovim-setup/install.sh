@@ -4,8 +4,6 @@ set -e
 
 echo "Starting to setup Neovim..."
 
-export GIT_SSH_COMMAND='ssh -o StrictHostKeyChecking=accept-new'
-
 USERNAME="${USERNAME:-"${_REMOTE_USER:-"dev"}"}"
 HOME_DIR=$( getent passwd "$USERNAME" | cut -d: -f6 )
 
@@ -23,7 +21,7 @@ else
 fi
 
 echo "Downloading DotFiles..."
-git clone git@github.com:OliRafa/neovim-configs.git $HOME_DIR/.config
+git clone https://github.com/OliRafa/neovim-configs.git $HOME_DIR/.config
 
 if [ -d "$HOME_DIR/temp" ]
 then
