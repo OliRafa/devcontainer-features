@@ -33,4 +33,6 @@ fi
 echo "Setting up LazyVim and Mason..."
 nvim --headless "+Lazy! sync" +qa
 
+chown $USERNAME $HOME_DIR/.config/**/*
+
 echo "Finished setting up Neovim!"
