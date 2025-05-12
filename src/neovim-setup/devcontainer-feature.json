@@ -1,0 +1,9 @@
+{
+  "name": "Neovim Setup",
+  "id": "neovim-setup",
+  "version": "1.0.0",
+  "description": "A feature to setup Neovim configs",
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils"
+  ]
+}
