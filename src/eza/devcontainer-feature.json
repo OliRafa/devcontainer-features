@@ -1,0 +1,14 @@
+{
+  "name": "Eza",
+  "id": "eza",
+  "version": "1.0.0",
+  "description": "A feature to install [Eza](https://github.com/eza-community/eza)",
+  "dependsOn": {
+    "ghcr.io/rocker-org/devcontainer-features/apt-packages": {
+      "packages": "wget,gpg"
+    }
+  },
+  "installsAfter": [
+    "ghcr.io/rocker-org/devcontainer-features/apt-packages"
+  ]
+}
