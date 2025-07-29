@@ -1,7 +1,7 @@
 {
   "name": "Neovim Setup",
   "id": "neovim-setup",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A feature to setup Neovim configs",
   "dependsOn": {
     "ghcr.io/devcontainers/features/git": {},
@@ -11,6 +11,7 @@
     },
     "ghcr.io/GeorgOfenbeck/features/lazygit-linuxbinary": {},
     "ghcr.io/devcontainers/features/python": {
+      "version": "none",
       "toolsToInstall": "commitizen"
     }
   },
