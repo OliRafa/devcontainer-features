@@ -17,9 +17,9 @@ sudo -u $USERNAME bash <<EOF
     # are already in the filesystem with files from the repository.
     stow . --adopt
     git reset --hard
-EOF
 
-echo "Setting up LazyVim and Mason..."
-nvim --headless "+Lazy! sync" +qa
+    echo "Setting up LazyVim and Mason..."
+    nvim --headless "+Lazy! sync" +qa
+EOF
 
 echo "Finished setting up Neovim!"
