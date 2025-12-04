@@ -9,13 +9,13 @@ HOME_DIR=$( getent passwd "$USERNAME" | cut -d: -f6 )
 
 echo "Downloading Dotfiles..."
 cd $HOME_DIR
-git clone https://github.com/OliRafa/dotfiles.git 
+runuser $USERNAME -- git clone https://github.com/OliRafa/dotfiles.git 
 cd dotfiles
 
 # By using the combo `--adopt` with `git reset --hard` we can replace files that
 # are already in the filesystem with files from the repository.
-stow . --adopt
-git reset --hard
+runuser $USERNAME -- stow . --adopt
+runuser $USERNAME -- git reset --hard
 
 echo "Setting up LazyVim and Mason..."
 nvim --headless "+Lazy! sync" +qa
