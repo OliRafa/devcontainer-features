@@ -1,7 +1,7 @@
 {
   "name": "Zsh Setup",
   "id": "zsh-setup",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A feature to setup ZSH",
   "dependsOn": {
     "ghcr.io/devcontainers/features/git": {},
@@ -11,9 +11,9 @@
     "ghcr.io/rocker-org/devcontainer-features/apt-packages": {
       "packages": "zoxide"
     },
-    "ghcr.io/jungaretti/features/make": {},
     "ghcr.io/OliRafa/devcontainer-features/eza": {},
-    "ghcr.io/OliRafa/devcontainer-features/bat": {}
+    "ghcr.io/OliRafa/devcontainer-features/bat": {},
+    "ghcr.io/braun-daniel/devcontainer-features/fzf": {}
   },
   "installsAfter": [
     "ghcr.io/devcontainers/features/git",
@@ -23,6 +23,7 @@
     "ghcr.io/rocker-org/devcontainer-features/apt-packages",
     "ghcr.io/nils-geistmann/devcontainers-features/zsh",
     "ghcr.io/OliRafa/devcontainer-features/eza",
-    "ghcr.io/OliRafa/devcontainer-features/bat"
+    "ghcr.io/OliRafa/devcontainer-features/bat",
+    "ghcr.io/braun-daniel/devcontainer-features/fzf"
   ]
 }
