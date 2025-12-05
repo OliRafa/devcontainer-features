@@ -1,11 +1,12 @@
 {
   "name": "Zsh Setup",
   "id": "zsh-setup",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "A feature to setup ZSH",
   "dependsOn": {
     "ghcr.io/devcontainers/features/git": {},
     "ghcr.io/nils-geistmann/devcontainers-features/zsh": {},
+    "ghcr.io/schlich/devcontainer-features/starship": {},
     "ghcr.io/jungaretti/features/ripgrep": {},
     "ghcr.io/rocker-org/devcontainer-features/apt-packages": {
       "packages": "zoxide"
@@ -17,6 +18,7 @@
   "installsAfter": [
     "ghcr.io/devcontainers/features/git",
     "ghcr.io/nils-geistmann/devcontainers-features/zsh",
+    "ghcr.io/schlich/devcontainer-features/starship",
     "ghcr.io/jungaretti/features/ripgrep",
     "ghcr.io/rocker-org/devcontainer-features/apt-packages",
     "ghcr.io/nils-geistmann/devcontainers-features/zsh",

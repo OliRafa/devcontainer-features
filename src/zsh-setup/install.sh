@@ -3,19 +3,11 @@ set -e
 
 
 echo "Starting to setup Zsh..."
+USERNAME="${USERNAME:-"${_REMOTE_USER:-"dev"}"}"
 
-git clone -b v5 https://github.com/romkatv/zsh4humans.git $_REMOTE_USER_HOME/zsh4humans
-
-cp $_REMOTE_USER_HOME/zsh4humans/.zshenv $_REMOTE_USER_HOME/.zshenv
-
-rm -rf $_REMOTE_USER_HOME/zsh4humans
-
-wget https://gist.githubusercontent.com/OliRafa/f39d29a34f38edf4a9c9a2f6dd092260/raw/.p10k.zsh -O $_REMOTE_USER_HOME/.p10k.zsh
-
-wget https://gist.githubusercontent.com/OliRafa/f39d29a34f38edf4a9c9a2f6dd092260/raw/.zshrc -O $_REMOTE_USER_HOME/.zshrc
-
-chown $_REMOTE_USER $_REMOTE_USER_HOME/.p10k.zsh
-chown $_REMOTE_USER $_REMOTE_USER_HOME/.zshenv
-chown $_REMOTE_USER $_REMOTE_USER_HOME/.zshrc
+echo "Installing zsh-autosuggestions..."
+sudo -u $USERNAME bash <<EOF
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+EOF
 
 echo "Finished setting up Zsh!"
