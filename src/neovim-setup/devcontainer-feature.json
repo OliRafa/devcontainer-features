@@ -1,7 +1,7 @@
 {
   "name": "Neovim Setup",
   "id": "neovim-setup",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "A feature to setup Neovim configs",
   "dependsOn": {
     "ghcr.io/devcontainers/features/git": {},
@@ -13,13 +13,15 @@
     "ghcr.io/devcontainers/features/python": {
       "version": "none",
       "toolsToInstall": "commitizen"
-    }
+    },
+    "ghcr.io/kreemer/features/stow": {}
   },
   "installsAfter": [
     "ghcr.io/devcontainers/features/git",
     "ghcr.io/duduribeiro/devcontainer-features/neovim",
     "ghcr.io/rocker-org/devcontainer-features/apt-packages",
     "ghcr.io/GeorgOfenbeck/features/lazygit-linuxbinary",
-    "ghcr.io/devcontainers/features/python"
+    "ghcr.io/devcontainers/features/python",
+    "ghcr.io/kreemer/features/stow"
   ]
 }
