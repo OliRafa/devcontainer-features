@@ -1,6 +1,7 @@
 
 # Delta (via Github Releases) (delta)
 
+
 [Delta](https://dandavison.github.io/delta) is a syntax-highlighting pager for git, diff, and grep output.
 
 ## Example Usage
