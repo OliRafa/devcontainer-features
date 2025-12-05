@@ -2,7 +2,7 @@
   "id": "delta",
   "version": "1.0.0",
   "name": "Delta (via Github Releases)",
-  "description": "[Delta](https://dandavison.github.io/delta/) is a syntax-highlighting pager for git, diff, and grep output.",
+  "description": "[Delta](https://dandavison.github.io/delta) is a syntax-highlighting pager for git, diff, and grep output.",
   "options": {
     "version": {
       "default": "latest",
