@@ -1,7 +1,7 @@
 {
   "name": "Neovim Setup",
   "id": "neovim-setup",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A feature to setup Neovim configs",
   "dependsOn": {
     "ghcr.io/devcontainers/features/git": {},
@@ -15,7 +15,8 @@
       "toolsToInstall": "commitizen"
     },
     "ghcr.io/kreemer/features/stow": {},
-    "ghcr.io/OliRafa/devcontainer-features/zsh-setup": {}
+    "ghcr.io/OliRafa/devcontainer-features/zsh-setup": {},
+    "ghcr.io/olirafa/devcontainer-features/delta": {}
   },
   "installsAfter": [
     "ghcr.io/devcontainers/features/git",
@@ -24,6 +25,7 @@
     "ghcr.io/GeorgOfenbeck/features/lazygit-linuxbinary",
     "ghcr.io/devcontainers/features/python",
     "ghcr.io/kreemer/features/stow",
-    "ghcr.io/OliRafa/devcontainer-features/zsh-setup"
+    "ghcr.io/OliRafa/devcontainer-features/zsh-setup",
+    "ghcr.io/olirafa/devcontainer-features/delta"
   ]
 }
