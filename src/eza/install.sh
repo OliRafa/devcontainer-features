@@ -2,17 +2,21 @@
 set -e
 
 
-echo "Starting to config Eza install..."
+echo "Starting to install Eza..."
 
-mkdir -p /etc/apt/keyrings
-wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
-echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | tee /etc/apt/sources.list.d/gierens.list
-chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
+. ./library_scripts.sh
 
-echo "Updating APT packages..."
-apt update
+# nanolayer is a cli utility which keeps container layers as small as possible
+# source code: https://github.com/devcontainers-extra/nanolayer
+# `ensure_nanolayer` is a bash function that will find any existing nanolayer installations,
+# and if missing - will download a temporary copy that automatically get deleted at the end
+# of the script
+ensure_nanolayer nanolayer_location "v0.5.4"
 
-echo "Installing Eza..."
-apt install -y eza
+$nanolayer_location \
+    install \
+    devcontainer-feature \
+    "ghcr.io/devcontainers-extra/features/gh-release:1.0.25" \
+    --option repo='eza-community/eza' --option binaryNames='eza' --option version="$VERSION"
 
-echo "Finished installing Eza!" 
+echo 'Done!'
