@@ -1,14 +1,22 @@
 {
-  "name": "Eza",
+  "name": "Eza (via Github Releases)",
   "id": "eza",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "A feature to install [Eza](https://github.com/eza-community/eza)",
-  "dependsOn": {
-    "ghcr.io/rocker-org/devcontainer-features/apt-packages": {
-      "packages": "wget,gpg"
+  "options": {
+    "version": {
+      "default": "latest",
+      "description": "Select the version to install.",
+      "proposals": [
+        "latest"
+      ],
+      "type": "string"
     }
   },
+  "dependsOn": {
+    "ghcr.io/devcontainers-extra/features/gh-release": {}
+  },
   "installsAfter": [
-    "ghcr.io/rocker-org/devcontainer-features/apt-packages"
+    "ghcr.io/devcontainers-extra/features/gh-release"
   ]
 }
