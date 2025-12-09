@@ -1,5 +1,5 @@
 
-# Eza (eza)
+# Eza (via Github Releases) (eza)
 
 A feature to install [Eza](https://github.com/eza-community/eza)
 
