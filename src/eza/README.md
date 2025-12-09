@@ -1,5 +1,5 @@
 
-# Eza (eza)
+# Eza (via Github Releases) (eza)
 
 A feature to install [Eza](https://github.com/eza-community/eza)
 
@@ -11,7 +11,11 @@ A feature to install [Eza](https://github.com/eza-community/eza)
 }
 ```
 
+## Options
 
+| Options Id | Description | Type | Default Value |
+|-----|-----|-----|-----|
+| version | Select the version to install. | string | latest |
 
 
 
