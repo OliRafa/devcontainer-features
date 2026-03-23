@@ -13,6 +13,6 @@ $nanolayer_location \
     install \
     devcontainer-feature \
     "ghcr.io/devcontainers-extra/features/gh-release:1.0.25" \
-    --option repo='tree-sitter/tree-sitter' --option binaryNames='tree-sitter' --option version="$VERSION"
+    --option repo='tree-sitter/tree-sitter' --option binaryNames='tree-sitter' --option version="$VERSION" --option assetRegex="tree-sitter-linux*"
 
 echo 'Done!'
