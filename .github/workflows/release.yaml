@@ -1,7 +1,9 @@
 name: "Release dev container features & Generate Documentation"
 on:
-  workflow_dispatch:
-  push:
+  workflow_run:
+    workflows: ["Validate devcontainer-feature.json files"]
+    types:
+      - completed
     branches:
       - main
 

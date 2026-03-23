@@ -16,7 +16,8 @@
     },
     "ghcr.io/kreemer/features/stow": {},
     "ghcr.io/OliRafa/devcontainer-features/zsh-setup": {},
-    "ghcr.io/olirafa/devcontainer-features/delta": {}
+    "ghcr.io/olirafa/devcontainer-features/delta": {},
+    "ghcr.io/OliRafa/devcontainer-features/tree-sitter-cli": {}
   },
   "installsAfter": [
     "ghcr.io/devcontainers/features/git",
@@ -26,6 +27,7 @@
     "ghcr.io/devcontainers/features/python",
     "ghcr.io/kreemer/features/stow",
     "ghcr.io/OliRafa/devcontainer-features/zsh-setup",
-    "ghcr.io/olirafa/devcontainer-features/delta"
+    "ghcr.io/olirafa/devcontainer-features/delta",
+    "ghcr.io/OliRafa/devcontainer-features/tree-sitter-cli"
   ]
 }
