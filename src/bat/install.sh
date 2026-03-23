@@ -1,11 +1,18 @@
-#!/usr/bin/env bash
 set -e
 
-mkdir -p $_REMOTE_USER_HOME/.local/bin
+. ./library_scripts.sh
 
-ln -s /usr/bin/batcat $_REMOTE_USER_HOME/.local/bin/bat
+# nanolayer is a cli utility which keeps container layers as small as possible
+# source code: https://github.com/devcontainers-extra/nanolayer
+# `ensure_nanolayer` is a bash function that will find any existing nanolayer installations,
+# and if missing - will download a temporary copy that automatically get deleted at the end
+# of the script
+ensure_nanolayer nanolayer_location "v0.5.4"
 
-chown $_REMOTE_USER $_REMOTE_USER_HOME/.local
-chown $_REMOTE_USER $_REMOTE_USER_HOME/.local/**/*
+$nanolayer_location \
+    install \
+    devcontainer-feature \
+    "ghcr.io/devcontainers-extra/features/gh-release:1.0.25" \
+    --option repo='sharkdp/bat' --option binaryNames='bat' --option version="$VERSION"
 
-echo "Finished installing Bat!" 
+echo 'Done!'

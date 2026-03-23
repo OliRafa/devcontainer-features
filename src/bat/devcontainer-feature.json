@@ -1,14 +1,19 @@
 {
-  "name": "Bat",
+  "name": "Bat (via Github Releases)",
   "id": "bat",
-  "version": "1.0.3",
-  "description": "A feature to install [Bat](https://github.com/sharkdp/bat).",
-  "dependsOn": {
-    "ghcr.io/rocker-org/devcontainer-features/apt-packages": {
-      "packages": "bat"
+  "version": "2.0.0",
+  "description": "[Bat](https://github.com/sharkdp/bat) A cat(1) clone with wings.",
+  "options": {
+    "version": {
+      "default": "latest",
+      "description": "Select the version to install.",
+      "proposals": [
+        "latest"
+      ],
+      "type": "string"
     }
   },
   "installsAfter": [
-    "ghcr.io/rocker-org/devcontainer-features/apt-packages"
+    "ghcr.io/devcontainers-extra/features/gh-release"
   ]
 }
