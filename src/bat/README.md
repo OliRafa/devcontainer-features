@@ -1,17 +1,21 @@
 
-# Bat (bat)
+# Bat (via Github Releases) (bat)
 
-A feature to install [Bat](https://github.com/sharkdp/bat).
+[Bat](https://github.com/sharkdp/bat) A cat(1) clone with wings.
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/OliRafa/devcontainer-features/bat:1": {}
+    "ghcr.io/OliRafa/devcontainer-features/bat:2": {}
 }
 ```
 
+## Options
 
+| Options Id | Description | Type | Default Value |
+|-----|-----|-----|-----|
+| version | Select the version to install. | string | latest |
 
 
 
