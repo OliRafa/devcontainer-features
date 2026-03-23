@@ -17,6 +17,8 @@
 |-----|-----|-----|-----|
 | version | Select the version to install. | string | latest |
 
+
+
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/OliRafa/devcontainer-features/blob/main/src/tree-sitter-cli/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/OliRafa/devcontainer-features/blob/main/src/tree-sitter/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
