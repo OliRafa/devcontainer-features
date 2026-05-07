@@ -1,0 +1,14 @@
+{
+  "name": "Dotfiles",
+  "id": "dotfiles",
+  "version": "1.0.0",
+  "description": "A feature to setup dotfiles",
+  "dependsOn": {
+    "ghcr.io/devcontainers/features/git": {},
+    "ghcr.io/kreemer/features/stow": {}
+  },
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/git",
+    "ghcr.io/kreemer/features/stow"
+  ]
+}
