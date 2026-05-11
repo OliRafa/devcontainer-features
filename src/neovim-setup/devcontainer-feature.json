@@ -1,35 +1,16 @@
 {
   "name": "Neovim Setup",
   "id": "neovim-setup",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A feature to setup Neovim configs",
   "dependsOn": {
-    "ghcr.io/devcontainers/features/git": {},
-    "ghcr.io/duduribeiro/devcontainer-features/neovim": {},
-    "ghcr.io/rocker-org/devcontainer-features/apt-packages": {
-      "packages": "npm"
-    },
-    "ghcr.io/GeorgOfenbeck/features/lazygit-linuxbinary": {},
-    "ghcr.io/devcontainers/features/python": {
-      "version": "none",
-      "toolsToInstall": "commitizen"
-    },
-    "ghcr.io/kreemer/features/stow": {},
-    "ghcr.io/OliRafa/devcontainer-features/zsh-setup": {},
-    "ghcr.io/olirafa/devcontainer-features/delta": {},
-    "ghcr.io/OliRafa/devcontainer-features/tree-sitter": {},
-    "ghcr.io/OliRafa/devcontainer-features/dotfiles": {}
+    "ghcr.io/OliRafa/devcontainer-features/dotfiles": {},
+    "ghcr.io/devcontainers-extra/features/homebrew-package": {
+      "package": "neovim npm commitizen lazygit delta tree-sitter"
+    }
   },
   "installsAfter": [
-    "ghcr.io/devcontainers/features/git",
-    "ghcr.io/duduribeiro/devcontainer-features/neovim",
-    "ghcr.io/rocker-org/devcontainer-features/apt-packages",
-    "ghcr.io/GeorgOfenbeck/features/lazygit-linuxbinary",
-    "ghcr.io/devcontainers/features/python",
-    "ghcr.io/kreemer/features/stow",
-    "ghcr.io/OliRafa/devcontainer-features/zsh-setup",
-    "ghcr.io/olirafa/devcontainer-features/delta",
-    "ghcr.io/OliRafa/devcontainer-features/tree-sitter",
-    "ghcr.io/OliRafa/devcontainer-features/dotfiles"
+    "ghcr.io/OliRafa/devcontainer-features/dotfiles",
+    "ghcr.io/devcontainers-extra/features/homebrew-package"
   ]
 }
