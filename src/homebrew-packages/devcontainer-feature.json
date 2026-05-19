@@ -1,0 +1,21 @@
+{
+  "name": "Homebrew Packages",
+  "id": "homebrew-packages",
+  "version": "1.0.0",
+  "description": "Installs Homebrew packages using Homebrew (Linuxbrew). ARM64-compatible; mirrors the `package` option of ghcr.io/devcontainers-extra/features/homebrew-package without using nanolayer.",
+  "options": {
+    "package": {
+      "type": "string",
+      "default": "",
+      "description": "Space-separated list of Homebrew packages to install (e.g. \"eza bat zsh\"). Taps are supported in the usual `tap/name` form."
+    }
+  },
+  "dependsOn": {
+    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew": {
+      "shallowClone": true
+    }
+  },
+  "installsAfter": [
+    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew"
+  ]
+}

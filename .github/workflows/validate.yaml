@@ -17,3 +17,19 @@ jobs:
         with:
           validate-only: "true"
           base-path-to-features: "./src"
+
+  smoke-test:
+    name: "Smoke test (${{ matrix.runner }})"
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [ubuntu-latest, ubuntu-24.04-arm]
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: "Install @devcontainers/cli"
+        run: npm install -g @devcontainers/cli
+
+      - name: "Test homebrew-packages"
+        run: devcontainer features test --features homebrew-packages .

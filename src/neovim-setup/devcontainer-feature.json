@@ -1,16 +1,16 @@
 {
   "name": "Neovim Setup",
   "id": "neovim-setup",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "A feature to setup Neovim configs",
   "dependsOn": {
     "ghcr.io/OliRafa/devcontainer-features/dotfiles": {},
-    "ghcr.io/devcontainers-extra/features/homebrew-package": {
+    "ghcr.io/OliRafa/devcontainer-features/homebrew-packages": {
       "package": "neovim npm commitizen lazygit delta tree-sitter"
     }
   },
   "installsAfter": [
     "ghcr.io/OliRafa/devcontainer-features/dotfiles",
-    "ghcr.io/devcontainers-extra/features/homebrew-package"
+    "ghcr.io/OliRafa/devcontainer-features/homebrew-packages"
   ]
 }

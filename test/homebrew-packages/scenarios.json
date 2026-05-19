@@ -1,0 +1,10 @@
+{
+    "install_tree": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "homebrew-packages": {
+                "package": "tree"
+            }
+        }
+    }
+}
