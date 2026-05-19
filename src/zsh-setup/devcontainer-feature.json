@@ -6,7 +6,7 @@
   "dependsOn": {
     "ghcr.io/OliRafa/devcontainer-features/dotfiles": {},
     "ghcr.io/OliRafa/devcontainer-features/homebrew-packages": {
-      "package": "eza bat zsh starship zoxide fzf ripgrep zsh-completions zsh-autosuggestions olets/tap/zsh-transient-prompt"
+      "packages": "eza, bat, zsh, starship, zoxide, fzf, ripgrep, zsh-completions, zsh-autosuggestions, olets/tap/zsh-transient-prompt"
     }
   },
   "installsAfter": [

@@ -5,10 +5,11 @@ echo "Starting to install Homebrew packages..."
 
 USERNAME="${USERNAME:-"${_REMOTE_USER:-"dev"}"}"
 BREW_PREFIX="/home/linuxbrew/.linuxbrew"
-PACKAGES="${PACKAGE:-}"
+PACKAGES_RAW="${PACKAGES:-}"
+PACKAGES="${PACKAGES_RAW//,/ }"
 
-if [ -z "${PACKAGES}" ]; then
-    echo "No packages specified (option \`package\` is empty); nothing to install."
+if [ -z "${PACKAGES// /}" ]; then
+    echo "No packages specified (option \`packages\` is empty); nothing to install."
     exit 0
 fi
 

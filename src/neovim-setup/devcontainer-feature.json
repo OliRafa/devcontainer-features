@@ -6,7 +6,7 @@
   "dependsOn": {
     "ghcr.io/OliRafa/devcontainer-features/dotfiles": {},
     "ghcr.io/OliRafa/devcontainer-features/homebrew-packages": {
-      "package": "neovim npm commitizen lazygit delta tree-sitter"
+      "packages": "neovim, npm, commitizen, lazygit, delta, tree-sitter"
     }
   },
   "installsAfter": [
