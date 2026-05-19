@@ -13,8 +13,10 @@ sudo -u $USERNAME bash <<EOF
     git clone https://github.com/OliRafa/dotfiles.git
     cd dotfiles
 
-    # By using the combo `--adopt` with `git reset --hard` we can replace files that
-    # are already in the filesystem with files from the repository.
+    # Using --adopt with "git reset --hard" lets us replace files already
+    # present in the filesystem with files from the repository. Backticks
+    # are avoided here on purpose: the heredoc is unquoted so the outer
+    # shell would try to execute their contents as commands.
     stow . --adopt
     git reset --hard
 EOF
