@@ -31,5 +31,5 @@ jobs:
       - name: "Install @devcontainers/cli"
         run: npm install -g @devcontainers/cli
 
-      - name: "Test homebrew-packages"
-        run: devcontainer features test --features homebrew-packages .
+      - name: "Test all features"
+        run: devcontainer features test .
