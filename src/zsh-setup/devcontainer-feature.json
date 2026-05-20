@@ -1,12 +1,12 @@
 {
   "name": "Zsh Setup",
   "id": "zsh-setup",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A feature to setup ZSH",
   "dependsOn": {
     "ghcr.io/OliRafa/devcontainer-features/dotfiles": {},
     "ghcr.io/OliRafa/devcontainer-features/homebrew-packages": {
-      "packages": "eza, bat, zsh, starship, zoxide, fzf, ripgrep, zsh-completions, zsh-autosuggestions, olets/tap/zsh-transient-prompt"
+      "packages": "zsh, delta, starship, zoxide, fzf, ripgrep, zsh-completions, zsh-autosuggestions, olets/tap/zsh-transient-prompt, eza, bat"
     }
   },
   "installsAfter": [
