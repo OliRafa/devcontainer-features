@@ -32,4 +32,4 @@ jobs:
         run: npm install -g @devcontainers/cli
 
       - name: "Test all features"
-        run: devcontainer features test .
+        run: devcontainer features test --base-image mcr.microsoft.com/devcontainers/base:ubuntu .
