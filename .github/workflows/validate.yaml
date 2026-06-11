@@ -31,9 +31,5 @@ jobs:
       - name: "Install @devcontainers/cli"
         run: npm install -g @devcontainers/cli
 
-      # Scope to homebrew-packages while v1.0.1 is unpublished: zsh-setup
-      # and neovim-setup pull the published homebrew-packages from GHCR,
-      # which is still v1.0.0 (lacks the Linux-sandbox / stdin fixes) and
-      # fails on current runner kernels. Drop the filter once v1.0.1 ships.
       - name: "Test all features"
-        run: devcontainer features test --features homebrew-packages --base-image mcr.microsoft.com/devcontainers/base:ubuntu .
+        run: devcontainer features test --base-image mcr.microsoft.com/devcontainers/base:ubuntu .
