@@ -1,7 +1,7 @@
 {
   "name": "Homebrew Packages",
   "id": "homebrew-packages",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Installs Homebrew packages using Homebrew (Linuxbrew). ARM64-compatible; mirrors the `package` option of ghcr.io/devcontainers-extra/features/homebrew-package without using nanolayer.",
   "options": {
     "packages": {

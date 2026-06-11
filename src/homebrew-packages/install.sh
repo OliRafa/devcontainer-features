@@ -20,10 +20,16 @@ sudo -u "${USERNAME}" bash <<EOF
     export HOMEBREW_NO_AUTO_UPDATE=1
     export HOMEBREW_NO_ENV_HINTS=1
     export HOMEBREW_NO_INSTALL_CLEANUP=1
+    # Docker build containers can't unshare user namespaces, so Bubblewrap
+    # can't create a rootless sandbox; disable it so source-build formulae
+    # (e.g. taps without bottles) can compile during \`brew install\`.
+    export HOMEBREW_NO_SANDBOX_LINUX=1
 
-    brew install ${PACKAGES}
+    # Redirect stdin: this script is itself fed to bash via heredoc, so brew
+    # would inherit an at-EOF stdin and source-build subprocesses can SIGPIPE.
+    brew install ${PACKAGES} </dev/null
 
-    brew cleanup --prune=all -s
+    brew cleanup --prune=all -s </dev/null
     rm -rf "\$(brew --cache)"
 EOF
 
